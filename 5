@@ -1,0 +1,6 @@
+import re
+from nltk.util import ngrams
+s="machine learning is an important aspect of ai and ai going to become important for daily functioning"
+tokens=[token for token in s.split()]
+ans=list(ngrams(tokens,2))
+print(ans)
