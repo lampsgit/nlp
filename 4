@@ -1,0 +1,15 @@
+import re
+def punctuation(raw_review):
+  text=raw_review
+  text=text.replace("'nt",' not')
+  text=text.replace("'re",' are')
+  text=text.replace("'ve",' have')
+  text=text.replace("'s",' is')
+  text=text.replace("'ll",' will')
+  text=text.replace("in",'ing')
+  text=text.replace("'m",' am')
+  letters_only=re.sub("[^a-z,A-Z]"," ",text)
+  return ("".join(letters_only))
+t="How's my team doin, you're supposed to be not loosin"
+p=punctuation(t)
+print(p)
