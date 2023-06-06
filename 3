@@ -1,0 +1,6 @@
+import re
+input="The 3 biggest animals are 1.Elephant 2.Rhino and 3.Dinosaur"
+input=input.lower()
+print(input)
+result=re.sub(r'\d.','',input)
+print(result)
